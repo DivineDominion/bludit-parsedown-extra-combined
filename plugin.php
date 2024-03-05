@@ -12,8 +12,8 @@ class pluginParsedownExtraCombined extends Plugin {
     if (!isset($GLOBALS['PARSEDOWN_TOC']))
     {
       require_once($this->phpPath().'vendors/ParsedownExtra.php');
-      require_once($this->phpPath().'vendors/ParsedownTOCExtension.php');
-      $GLOBALS['PARSEDOWN_TOC'] = new ParsedownToC();
+      require_once($this->phpPath().'vendors/ParsedownExtended.php');
+      $GLOBALS['PARSEDOWN_TOC'] = new ParsedownExtended();
     }
 
 		if ($GLOBALS['WHERE_AM_I']=='page') {

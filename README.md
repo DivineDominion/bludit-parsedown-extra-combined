@@ -8,5 +8,5 @@ Installs `$GLOBALS['PARSEDOWN_TOC']` in `beforeSiteLoad` so you can request the 
 
 Using:
 
-- [Parsedown Extra](https://github.com/erusev/parsedown-extra).
-- [Parsedown ToC Extension](https://github.com/BenjaminHoegh/parsedownToc)
+- [Parsedown Extra](https://github.com/erusev/parsedown-extra)
+- [Parsedown Extended](https://github.com/BenjaminHoegh/ParsedownExtended)
