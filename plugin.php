@@ -4,14 +4,18 @@ class pluginParsedownExtraCombined extends Plugin {
 
 	private function parse($content)
 	{
-		require_once($this->phpPath().'vendors/ParsedownExtra.php');
-    require_once($this->phpPath().'vendors/ParsedownTOCExtension.php');
-		$Parsedown = new ParsedownToC();
-		return $Parsedown->text($content);
+		return $GLOBALS['PARSEDOWN_TOC']->text($content);
 	}
 
 	public function beforeSiteLoad()
 	{
+    if (!isset($GLOBALS['PARSEDOWN_TOC']))
+    {
+      require_once($this->phpPath().'vendors/ParsedownExtra.php');
+      require_once($this->phpPath().'vendors/ParsedownTOCExtension.php');
+      $GLOBALS['PARSEDOWN_TOC'] = new ParsedownToC();
+    }
+
 		if ($GLOBALS['WHERE_AM_I']=='page') {
 			$content = $this->parse($GLOBALS['page']->contentRaw());
 			$GLOBALS['page']->setField('content', $content);
