@@ -1,0 +1,7 @@
+{
+	"plugin-data":
+	{
+		"name": "Parsedown Extra Combined",
+		"description": "Adds support for Markdown Extras and ToC."
+	}
+}
