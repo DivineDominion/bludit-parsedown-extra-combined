@@ -13,7 +13,8 @@ class pluginParsedownExtraCombined extends Plugin {
     {
       require_once($this->phpPath().'vendors/ParsedownExtra.php');
       require_once($this->phpPath().'vendors/ParsedownExtended.php');
-      $GLOBALS['PARSEDOWN_TOC'] = new ParsedownExtended();
+      require_once($this->phpPath().'vendors/ParsedownLitFootnotes.php');
+      $GLOBALS['PARSEDOWN_TOC'] = new ParsedownLitFootnotes();
     }
 
 		if ($GLOBALS['WHERE_AM_I']=='page') {
